@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>搜索结果</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.body
+		{
+			margin:5px;
+		}
+		.main_left
+		{
+			width:40%;
+			height:1000px;
+			
+			float:left;
+		}
+		.main_right
+		{
+			width:50%;
+			height:1000px;
+			
+			float:right;
+		}
+	</style>
+</head>
+<body>
+		<div class="box">
+			<center><h4>以下列资源请跟左右序号相对</h4></center>
+			<div class="main_left">
+		{% for each in seach_data_name %}
+		<p>----------------------------------------------------------------------------------------------</p>
+			<p>{{loop.index}}</p>
+			<p>{{each}}</p>
+			
+		{% endfor %}
+		<br>
+		<br>
+		
+
+			</div>
+			<div class="main_right">
+				{% for item in import_data %}
+				<p>----------------------------------------------------------------------------------------------</p>
+			<p>{{loop.index}}</p>
+			<p>这是磁链:{{item}}</p>
+			<br>
+			<br>
+			<br>
+			{%endfor%}
+
+			</div>
+		</div>
+</body>
+</html>
