@@ -27,29 +27,28 @@
 <body>
 		<div class="box">
 			<center><h4>以下列资源请跟左右序号相对</h4></center>
-			<div class="main_left">
+
+		<table border=1>	
 		{% for each in seach_data_name %}
-		<p>----------------------------------------------------------------------------------------------</p>
-			<p>{{loop.index}}</p>
-			<p>{{each}}</p>
+		
+			<tr>
+				<td><p>{{loop.index}}</p></td>
+				<td><p>{{each}}</p></td>
+			</tr>
 			
 		{% endfor %}
-		<br>
-		<br>
+		
 		
 
-			</div>
-			<div class="main_right">
+			
 				{% for item in import_data %}
-				<p>----------------------------------------------------------------------------------------------</p>
-			<p>{{loop.index}}</p>
-			<p>这是磁链:{{item}}</p>
-			<br>
-			<br>
-			<br>
+		<tr>
+			<td><p>{{loop.index}}</p></td>
+			<td><p>这是磁链:{{item}}</p></td>
+		</tr>
 			{%endfor%}
 
-			</div>
+			</table>
 		</div>
 </body>
 </html>

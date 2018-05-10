@@ -25,6 +25,7 @@ def index():
 				
 			
 				seach_data_name.append(each.get_text())
+				
 				for s in each.find_all('a'):
 					
 					seach_link.append(s.get('href'))
